@@ -1,0 +1,9 @@
+fetch("https://restcountries.eu/rest/v2/lang/es")
+  .then((data) => data.json())
+  .then((spanish) => {
+    spanish.filter((Europe) => {
+      if (Europe.region == "Europe") {
+        console.log(Europe.name);
+      }
+    });
+  });
